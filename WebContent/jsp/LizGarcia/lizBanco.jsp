@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="">
-		<table>
+		<table >
 			<tr>
 				<td>Usuario:</td>
 				<td><input type="text" name="lblUsuario"></td>
@@ -17,12 +17,16 @@
 				<td>Número de cuenta:</td>
 				<td><input type="text" name="lblNumCuenta"></td>
 			</tr>
-			
+
 			<tr>
 				<td>Clave banco:</td>
-				<td><input type="text" name="lblClaveBanco"></td>
+				<td><select name="programa">
+						<option value="banamex" selected="selected">Banamex</option>
+						<option value="hsbc">HSBC</option>
+						<option value="santander">Santander</option>
+				</select></td>
 			</tr>
-			
+
 			<tr>
 				<td>Contraseña:</td>
 				<td><input type="text" name="lblPassword"></td>
