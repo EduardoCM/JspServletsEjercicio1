@@ -1,10 +1,13 @@
 package giselleflorestepatl.constructores;
 
+//import giselleflorestepatl.util.validaciones;
+import static giselleflorestepatl.util.validaciones.validarContrasena;
+
 public class CuentaBancaria {
 	
 	private String usuario;
 	private String numCuenta;
-	private String claveBanco;
+	private BancosEnum claveBanco;
 	private String contrasena;
 	private double saldo;
 	
@@ -25,10 +28,9 @@ public class CuentaBancaria {
 		this.numCuenta = numCuenta;
 		this.saldo = saldo;
 		System.out.println("Nueva cuenta de: " + this.usuario
-				+  "Num cuenta: " + this.numCuenta 
+				+  " Num cuenta: " + this.numCuenta 
 				+ " Saldo: " + this.saldo);
 	}
-	
 	
 	
 	public double consultaSaldo() {
@@ -36,7 +38,6 @@ public class CuentaBancaria {
 	}
 	
 	
-
 	public boolean depositar(double deposito) {
 		return true;
 	}
@@ -59,16 +60,29 @@ public class CuentaBancaria {
 	public void setNumCuenta(String numCuenta) {
 		this.numCuenta = numCuenta;
 	}
-	public String getClaveBanco() {
+
+
+	
+	public BancosEnum getClaveBanco() {
 		return claveBanco;
 	}
-	public void setClaveBanco(String claveBanco) {
+
+	public void setClaveBanco(BancosEnum claveBanco) {
 		this.claveBanco = claveBanco;
 	}
+
 	public String getContrasena() {
 		return contrasena;
 	}
 	public void setContrasena(String contrasena) {
+		/*validaciones valida = new validaciones(); 
+		 Ya no se instancia un objeto pues es estatico el
+		 metodo al que se quiere acceder
+		*/
+		//valida.validarContrasena(contrasena);
+		//Ya no se crea el objeto, es estatico
+		//validaciones.validarContrasena(contrasena);
+		validarContrasena(contrasena);//esto se ocupa cuando se hace el import static
 		this.contrasena = contrasena;
 	}
 	public double getSaldo() {

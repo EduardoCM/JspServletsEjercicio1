@@ -1,7 +1,5 @@
 package giselleflorestepatl.constructores;
 
-import giselleflorestepatl.util.validaciones;
-
 public class testBanco {
 	public static void main(String [] args) {
 		//Constructor
@@ -10,13 +8,13 @@ public class testBanco {
 		CuentaBancaria cuentaAlejandra = new CuentaBancaria("Alejandra", "12356ASD", 50_000);
 		
 		cuentaGis.depositar(25_000);
+		cuentaGis.setClaveBanco(BancosEnum.HSBC);
+		
+		//cuentaGis.setClaveBanco(BancosEnum.BANCOMER.toString());
+		//cuentaGis.setClaveBanco(BancosEnum.BANCOMER.getNombre());
+		cuentaGis.setClaveBanco(BancosEnum.BANCOMER);
+		
 		cuentaAlejandra.setContrasena("99999");
-		validaciones validaCuentaAlejandra = new validaciones();
-		validaCuentaAlejandra.validarContrasena(cuentaAlejandra.getContrasena());
-		cuentaAlejandra.setContrasena("99999A");
-		validaCuentaAlejandra.validarContrasena(cuentaAlejandra.getContrasena());
-		cuentaAlejandra.setContrasena("GGGGGGG");
-		validaCuentaAlejandra.validarContrasena(cuentaAlejandra.getContrasena());
 		
 	}
 

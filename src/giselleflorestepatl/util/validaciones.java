@@ -2,7 +2,7 @@ package giselleflorestepatl.util;
 
 public class validaciones {
 	
-	public void validarContrasena(String password) {
+	public static void validarContrasena(String password) {
 		boolean numero  = false;
 		boolean letras  = false;
 		
