@@ -1,5 +1,7 @@
 package odinaraujobarragan.constructores;
 
+import static odinaraujobarragan.util.Validaciones.validarContrasena;;
+
 public class CuentaBancaria {
 	private String usuario;
 	private String numCuenta;
@@ -64,6 +66,7 @@ public class CuentaBancaria {
 	}
 
 	public void setContrasena(String contrasena) {
+		validarContrasena(contrasena);
 		this.contrasena = contrasena;
 	}
 
