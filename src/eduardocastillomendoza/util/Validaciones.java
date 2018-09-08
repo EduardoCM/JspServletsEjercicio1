@@ -1,8 +1,10 @@
 package eduardocastillomendoza.util;
 
+import static java.lang.System.out;
+
 public class Validaciones {
 	
-	public void validarContrasena(String pass) {
+	public static void validarContrasena(String pass) {
 		boolean numero = false;
 		boolean letras = false;
 		
@@ -13,15 +15,15 @@ public class Validaciones {
 			}else {
 				letras = true;
 			}
-			
-			if(numero && !letras) {
-				System.out.println("Todos son digitos");
-			}else if (numero) {
-				System.out.println("Alfanumericos");
-			}else {
-				System.out.println("Todos letras");
-			}
 		
+		}
+		
+		if(numero && !letras) {
+			out.println("Todos son digitos");
+		}else if (numero) {
+			out.println("Alfanumericos");
+		}else {
+			out.println("Todos letras");
 		}
 	}
 
