@@ -3,6 +3,8 @@ package davidjosuerodriguezchavez.constructores;
 import static davidjosuerodriguezchavez.util.Validaciones.validarPassword;
 
 public class CuentaBancaria {
+	
+	private int id;
 	private String usuario;
 	private String numCuenta;
 	private BancosEnum claveBanco;
@@ -22,8 +24,8 @@ public class CuentaBancaria {
 		this.usuario = usuario;
 		this.numCuenta = numCuenta;
 		this.saldo = saldo;
-		System.out.println("Nueva cuenta de " + this.usuario + "\nCon numero de cuenta: " 
-							+ this.numCuenta + "\nCon saldo inicial: " + this.saldo);
+		System.out.println("Nueva cuenta de " + this.usuario + "\nCon numero de cuenta: " + this.numCuenta
+				+ "\nCon saldo inicial: " + this.saldo);
 	}
 
 	private double consultaSaldo() {
@@ -32,6 +34,14 @@ public class CuentaBancaria {
 
 	public boolean depositar(double deposito) {
 		return true;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getUsuario() {
@@ -73,5 +83,11 @@ public class CuentaBancaria {
 
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
+	}
+
+	@Override
+	public String toString() {
+		return "CuentaBancaria [id=" + id + ", usuario=" + usuario + ", numCuenta=" + numCuenta + ", claveBanco="
+				+ claveBanco + ", password=" + password + ", saldo=" + saldo + "]";
 	}
 }
