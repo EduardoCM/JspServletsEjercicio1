@@ -1,8 +1,9 @@
-package eduardocastillomendoza.util;
+package yonnysanchezhernandez.util;
 
 public class Validaciones {
 	
 	public void validarContrasena(String pass) {
+		
 		boolean numero = false;
 		boolean letras = false;
 		
@@ -13,16 +14,16 @@ public class Validaciones {
 			}else {
 				letras = true;
 			}
-			
-			if(numero && !letras) {
-				System.out.println("Todos son digitos");
-			}else if (numero) {
-				System.out.println("Alfanumericos");
-			}else {
-				System.out.println("Todos letras");
-			}
-		
-		}
-	}
 
+		}
+		
+		if(numero = true & letras == false) {
+			System.out.println("Todos son numero");
+		}if(letras = true & numero == false) {
+			System.out.println("Todos son letras");
+		}else {
+			System.out.println("Es alfanumerico");
+		}
+
+		}
 }

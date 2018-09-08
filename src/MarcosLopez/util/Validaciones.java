@@ -2,7 +2,7 @@ package MarcosLopez.util;
 
 public class Validaciones {
 	
-	public void validarContraseña(String pass){
+	public void validarContrasena(String pass){
 		boolean numero = false;
 		boolean letras = false;
 		
@@ -14,7 +14,7 @@ public class Validaciones {
 		}
 		
 		if(numero & !letras)
-			System.out.println("Todos son dígitos");
+			System.out.println("Todos son digitos");
 		else if(!numero & letras)
 			System.out.println("Todos son letras");
 		else if(numero & letras)
