@@ -1,4 +1,4 @@
-package MarcosLopez;
+package MarcosLopez.model;
 
 public class Producto {
 	private String nombre;
