@@ -3,7 +3,7 @@ package gerardogarcia.Util;
 public class Validaciones {
 
 	
-	public void validarContraseña( String pass) {
+	public void validarContrasena( String pass) {
 		boolean numero = false;
 		boolean letras = false;
 		for (int i=0; i<pass.length(); i++) {
@@ -14,8 +14,9 @@ public class Validaciones {
 				letras = true;
 				System.out.println("Todos son letras");
 			}
+			System.out.println("alfanumerico");
 		}
-		System.out.println("alfanumerico");
+		
 	}
 	
 	
