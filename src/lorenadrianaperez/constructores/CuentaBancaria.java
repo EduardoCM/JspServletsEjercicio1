@@ -1,6 +1,6 @@
 package lorenadrianaperez.constructores;
 
-import lorenadrianaperez.util.Validaciones;
+import static lorenadrianaperez.util.Validaciones.validarContrasena;
 
 public class CuentaBancaria {
 	
@@ -59,7 +59,7 @@ public class CuentaBancaria {
 	}
 
 	public void setContrasena(String contrasena) {
-		Validaciones.validarContrasena(contrasena);
+		validarContrasena(contrasena);
 		this.contrasena = contrasena;
 	}
 
