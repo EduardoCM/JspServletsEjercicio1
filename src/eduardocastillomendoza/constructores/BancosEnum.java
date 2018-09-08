@@ -2,10 +2,10 @@ package eduardocastillomendoza.constructores;
 
 public enum BancosEnum {
 	
-	B1("banamex", 20), 
-	B2("bancomer", 15), 
-	B3("santander", 25), 
-	BANCOHSBC("hsbc", 25);
+	BANAMEX("banamex", 20), 
+	BANCOMER("bancomer", 15), 
+	SANTANDER("santander", 25), 
+	HSBC("hsbc", 25);
 	
 	private double cat;
 	private String nombre;

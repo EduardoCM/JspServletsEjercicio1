@@ -1,113 +1,119 @@
-package eduardocastillomendoza.constructores;
+package jaimebastida.constructores;
 
-import static eduardocastillomendoza.util.Validaciones.validarContrasena;;
+import static jaimebastida.util.Validaciones.validarPassword;
 
-public class CuentaBancaria {
-
+public class CuentaBancaria 
+{
 	private int id;
-	
 	private String usuario;
 	private String numCuenta;
 	private BancosEnum claveBanco;
 	private String contrasena;
 	private double saldo;
 	
-	public CuentaBancaria() {
+	public CuentaBancaria()
+	{
 		
 	}
-	public CuentaBancaria(String usuario) {
+	
+	public CuentaBancaria(String usuario)
+	{
 		this.usuario = usuario;
-		System.out.println("Nueva cuenta de " + this.usuario);
+		System.out.println("Nueva cuenta de " + usuario);
 	}
 	
-	public CuentaBancaria(String usuario, String numCuenta,
-			              double saldo) {
+	public CuentaBancaria(String usuario, String numCuenta, double saldo)
+	{
 		this.usuario = usuario;
 		this.numCuenta = numCuenta;
 		this.saldo = saldo;
-		System.out.println("Nueva cuenta de " + this.usuario
-				+ this.numCuenta +
-				"Con un sldo inicial: " + this.saldo);
+		System.out.println("Nueva cuenta de " + usuario + "\nCon numero de cuenta: " 
+		+ this.numCuenta + "\nCon saldo inicial: " + this.saldo);
 	}
 	
+	public CuentaBancaria(String usuario, String numCuenta, String claveBanco, String contrasena, double saldo)
+	{
+		this.usuario = usuario;
+		this.numCuenta = numCuenta;
+		//this.claveBanco = claveBanco;
+		validarPassword(contrasena);
+		this.contrasena = contrasena;
+		this.saldo = saldo;
+		System.out.println("Nueva cuenta de " + usuario + "\nCon numero de cuenta: " 
+		+ this.numCuenta + "\nCon saldo inicial: " + this.saldo);
+	}
 	
+	public double consultaSaldo()
+	{
+		return saldo;
+	}
+	
+	public boolean depositar(double deposito)
+	{
+		return true;
+	}
 	
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public double consultaSaldo() {
-		return saldo;
-	}
 	
-	public boolean depositar(double deposito) {
+	public boolean retirar(double retiro)
+	{
 		return true;
 	}
 	
-	public boolean retirar(double retiro) {
-		return true;
-	}
-	
-	
-
 	public String getUsuario() {
 		return usuario;
 	}
-
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-
 	public String getNumCuenta() {
 		return numCuenta;
 	}
-
 	public void setNumCuenta(String numCuenta) {
 		this.numCuenta = numCuenta;
 	}
-
-	
-
 	public BancosEnum getClaveBanco() {
 		return claveBanco;
 	}
 	public void setClaveBanco(String claveBanco) {
-		switch (claveBanco) {
+		switch(claveBanco) 
+		{
 		case "banamex":
 			this.claveBanco = BancosEnum.BANAMEX;
-			break;
-        case "santander":
+		break;
+		case "bancomer":
+			this.claveBanco = BancosEnum.BANCOMER;
+		break;
+		case "santander":
 			this.claveBanco = BancosEnum.SANTANDER;
-		 break;
-        case "hsbc":
+		break;
+		case "hsbc":
 			this.claveBanco = BancosEnum.HSBC;
-    		break;
-       case "bancomer":
-    	   this.claveBanco = BancosEnum.BANCOMER;
-    		break;	
+		break;
 		default:
-			break;
+		break;
 		}
-		
 	}
 	public String getContrasena() {
 		return contrasena;
 	}
-
 	public void setContrasena(String contrasena) {
-		validarContrasena(contrasena);		
+		validarPassword(contrasena);
 		this.contrasena = contrasena;
 	}
-
 	public double getSaldo() {
 		return saldo;
 	}
-
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+
 	@Override
 	public String toString() {
 		return "CuentaBancaria [id=" + id + ", usuario=" + usuario + ", numCuenta=" + numCuenta + ", claveBanco="
@@ -115,5 +121,4 @@ public class CuentaBancaria {
 	}
 	
 	
-
 }
