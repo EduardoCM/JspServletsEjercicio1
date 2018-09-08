@@ -51,8 +51,8 @@ public class CuentaBancaria {
 	public String getContrasena() {
 		return contrasena;
 	}
-	public void setContrasena(String contraseña) {
-		this.contrasena = contraseña;
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 	public double getSaldo() {
 		return saldo;
