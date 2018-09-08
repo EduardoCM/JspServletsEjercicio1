@@ -25,7 +25,6 @@ public class CuentaServletDavid extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println(":::GET:::");
 		response.getWriter().append("Cuentas agregadas: ").append(cuentas.toString());
 	}
@@ -59,6 +58,10 @@ public class CuentaServletDavid extends HttpServlet {
 		cuenta.setPassword(password);
 
 		cuentas.add(cuenta);
+		
+		request.setAttribute("cuentas", cuentas);
+		
+		request.getRequestDispatcher("/jsp/DavidRodriguez/DavidRodriguez.jsp").forward(request, response);
 	}
 
 }
