@@ -21,7 +21,7 @@ public class Validaciones {
 		} else {
 			if (letras) {
 			System.out.println("Todos son letras");
-			}else if(numero) {
+			}else {
 				System.out.println("Todos son digitos");
 			}
 		}
