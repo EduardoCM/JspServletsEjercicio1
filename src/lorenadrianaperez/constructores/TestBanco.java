@@ -10,6 +10,8 @@ public class TestBanco {
 		
 		CuentaBancaria cuentaLeo = new CuentaBancaria("Leonardo");
 		
+		cuentaFabi1.setContrasena("123456b");
+		
 		CuentaBancaria cuentaAlejandra =
 				new CuentaBancaria("Alejandra", "28423100", 20_000);
 		
