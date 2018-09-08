@@ -1,79 +1,74 @@
-package jenniferpineda.constructores;
+package lorenadrianaperez.constructores;
 
-import jenniferpineda.util.Validaciones;
-
-import static jenniferpineda.util.Validaciones.validarContrasena;
+import static lorenadrianaperez.util.Validaciones.validarContrasena;
 
 public class CuentaBancaria {
 	
+	private String usuario;
 	private String numCuenta;
-	private BancosEnum claveBanco;
+	private String claveBanco;
 	private String contrasena;
 	private double saldo;
-	private String usuario;
 	
 	public CuentaBancaria() {
-		System.out.println("Se crea nueva cuenta vacia");
+		System.out.println("Se crea nueva cuenta");
 	}
 	
 	public CuentaBancaria(String usuario) {
 		this.usuario = usuario;
-		System.out.println("Nueva cuenta de " + usuario);
+		System.out.println("Nueva cuenta de " + this.usuario);
 	}
 	
 	public CuentaBancaria(String usuario, String numCuenta, double saldo) {
 		this.usuario = usuario;
 		this.numCuenta = numCuenta;
 		this.saldo = saldo;
-		System.out.println("Nueva cuenta de " + this.usuario + this.numCuenta + "Con un saldo inicial " + this.saldo);
+		
+		System.out.println("Nueva cuenta de " + this.usuario +" #Cta. "+ this.numCuenta
+							+ " Con un saldo inicial de: $" + this.saldo);
 	}
 	
-	public double consultaSaldo() {
-		return saldo;
+
+
+	public String getUsuario() {
+		return usuario;
 	}
-	
-	public boolean depositar(double deposito) {
-		return true;
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
-	
-	public boolean retirar(double retiro) {
-		return true;
-	}
-	
+
 	public String getNumCuenta() {
 		return numCuenta;
 	}
+
 	public void setNumCuenta(String numCuenta) {
 		this.numCuenta = numCuenta;
 	}
-	
-	public BancosEnum getClaveBanco() {
+
+	public String getClaveBanco() {
 		return claveBanco;
 	}
 
-	public void setClaveBanco(BancosEnum claveBanco) {
+	public void setClaveBanco(String claveBanco) {
 		this.claveBanco = claveBanco;
 	}
 
 	public String getContrasena() {
 		return contrasena;
 	}
+
 	public void setContrasena(String contrasena) {
 		validarContrasena(contrasena);
 		this.contrasena = contrasena;
-		
 	}
+
 	public double getSaldo() {
 		return saldo;
 	}
+
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
-	}
-	public String getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
 	}
 	
 	

@@ -1,10 +1,12 @@
 package eduardocastillomendoza.constructores;
 
+import static eduardocastillomendoza.util.Validaciones.validarContrasena;;
+
 public class CuentaBancaria {
 
 	private String usuario;
 	private String numCuenta;
-	private String claveBanco;
+	private BancosEnum claveBanco;
 	private String contrasena;
 	private double saldo;
 	
@@ -58,19 +60,20 @@ public class CuentaBancaria {
 		this.numCuenta = numCuenta;
 	}
 
-	public String getClaveBanco() {
+	
+
+	public BancosEnum getClaveBanco() {
 		return claveBanco;
 	}
-
-	public void setClaveBanco(String claveBanco) {
+	public void setClaveBanco(BancosEnum claveBanco) {
 		this.claveBanco = claveBanco;
 	}
-
 	public String getContrasena() {
 		return contrasena;
 	}
 
 	public void setContrasena(String contrasena) {
+		validarContrasena(contrasena);		
 		this.contrasena = contrasena;
 	}
 
