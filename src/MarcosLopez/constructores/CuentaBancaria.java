@@ -1,5 +1,7 @@
 package MarcosLopez.constructores;
 
+import static MarcosLopez.util.Validaciones.validarContrasena;
+
 public class CuentaBancaria {
 	private String usuario;
 	private String numCuenta;
@@ -59,11 +61,12 @@ public class CuentaBancaria {
 		this.claveBanco = claveBanco;
 	}
 	
-	public String getContraseña() {
+	public String getContrasena() {
 		return contrasena;
 	}
 	
-	public void setContraseña(String contrasena) {
+	public void setContrasena(String contrasena) {
+		validarContrasena(contrasena);
 		this.contrasena = contrasena;
 	}
 	

@@ -1,8 +1,10 @@
 package jenniferpineda.util;
 
+import static java.lang.System.out;
+
 public class Validaciones {
 	
-	public void validarContrasena(String pass) {
+	public static void validarContrasena(String pass) {
 		boolean numero = false;
 		boolean letras = false;
 		
@@ -14,13 +16,13 @@ public class Validaciones {
 			}
 		}
 		if(numero && letras) {
-			System.out.println("Es alfanumerico");
+			out.println("Es alfanumerico");
 		}
 		else if(numero && !letras) {
-			System.out.println("Todos son digitos");
+			out.println("Todos son digitos");
 		}
-		else if(!numero && !letras){
-			System.out.println("Todos son letras");
+		else if(!numero && letras){
+			out.println("Todos son letras");
 		}
 	}
 	

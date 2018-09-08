@@ -2,7 +2,7 @@ package lorenadrianaperez.util;
 
 public class Validaciones {
 	
-	public void validarContraseña(String pass) {
+	public static void validarContrasena(String pass) {
 		boolean numero = false;
 		boolean letras = false;
 
@@ -21,7 +21,7 @@ public class Validaciones {
 		} else {
 			if (letras) {
 			System.out.println("Todos son letras");
-			}else if(numero) {
+			}else {
 				System.out.println("Todos son digitos");
 			}
 		}
