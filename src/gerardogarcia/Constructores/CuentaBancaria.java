@@ -1,5 +1,7 @@
 package gerardogarcia.Constructores;
 
+import gerardogarcia.Util.Validaciones;
+
 public class CuentaBancaria {
 
 		private String usuario;
@@ -66,6 +68,8 @@ public class CuentaBancaria {
 		}
 
 		public void setContrasena(String contrasena) {
+			Validaciones validaciones = new Validaciones ();
+			validaciones.validarContrasena(contrasena);
 			this.contrasena = contrasena;
 		}
 
