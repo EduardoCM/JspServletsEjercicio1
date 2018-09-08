@@ -1,4 +1,4 @@
-package eduardocastillomendoza.servlets;
+package odinaraujobarragan.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,22 +10,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import eduardocastillomendoza.constructores.CuentaBancaria;
+import odinaraujobarragan.constructores.CuentaBancaria;
 
 /**
- * Servlet implementation class CuentaServletEduardo
+ * Servlet implementation class CuentaServletOdin
  */
-@WebServlet("/cuentaServletEduardo")
-public class CuentaServletEduardo extends HttpServlet {
+@WebServlet("/cuentaServletOdin")
+public class CuentaServletOdin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	public static List<CuentaBancaria> cuentaBancaria = new ArrayList<>();
-	
-       
+	private static List<CuentaBancaria> listaCuentasBancarias = new ArrayList<>();
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CuentaServletEduardo() {
+    public CuentaServletOdin() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,35 +32,28 @@ public class CuentaServletEduardo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(cuentaBancaria.toString()).append(request.getContextPath());
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String usuario = request.getParameter("usuario");
-		String numeroCuenta = request.getParameter("numCuenta");
+		String numeroCuenta = request.getParameter("numeroCuenta");
 		String claveBanco = request.getParameter("claveBanco");
 		String saldoInicial = request.getParameter("saldoInicial");
-		String contrasena = request.getParameter("pass");
+		String contrasena = request.getParameter("contrasena");
 		
 		CuentaBancaria nuevaCuenta = new CuentaBancaria();
 		
-		nuevaCuenta.setId(cuentaBancaria.size() + 1);
+		nuevaCuenta.setIdCuentaBancaria(listaCuentasBancarias.size()+1);
 		nuevaCuenta.setUsuario(usuario);
 		nuevaCuenta.setNumCuenta(numeroCuenta);
-		nuevaCuenta.setClaveBanco(claveBanco);
 		nuevaCuenta.setSaldo(Double.parseDouble(saldoInicial));
 		nuevaCuenta.setContrasena(contrasena);
 		
-		cuentaBancaria.add(nuevaCuenta);
-		
-		request.setAttribute("cuentaBancariaList", cuentaBancaria);
-		
-		request.getRequestDispatcher("/jsp/EduardoCastillo/EduardoBanco.jsp")
-		.forward(request, response);
-		
+		listaCuentasBancarias.add(nuevaCuenta);
 	}
 
 }

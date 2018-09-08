@@ -3,7 +3,16 @@ package odinaraujobarragan.constructores;
 import static odinaraujobarragan.util.Validaciones.validarContrasena;;
 
 public class CuentaBancaria {
+	private int idCuentaBancaria;
 	private String usuario;
+	public int getIdCuentaBancaria() {
+		return idCuentaBancaria;
+	}
+
+	public void setIdCuentaBancaria(int idCuentaBancaria) {
+		this.idCuentaBancaria = idCuentaBancaria;
+	}
+
 	private String numCuenta;
 	private String claveBanco;
 	private String contrasena;
@@ -58,6 +67,21 @@ public class CuentaBancaria {
 	}
 
 	public void setClaveBanco(String claveBanco) {
+		switch(claveBanco) {
+		case "banamex":
+			this.claveBanco = BancosEnum.BANAMEX.getNombre();
+			break;
+		case "santander":
+			this.claveBanco = BancosEnum.SANTANDER.getNombre();
+			break;
+		case "hsbc":
+			this.claveBanco = BancosEnum.HSBC.getNombre();
+			break;
+		case "bancomer":
+			this.claveBanco = BancosEnum.BANCOMER.getNombre();
+			break;
+			
+		}
 		this.claveBanco = claveBanco;
 	}
 
