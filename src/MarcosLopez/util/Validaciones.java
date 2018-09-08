@@ -14,7 +14,7 @@ public class Validaciones {
 		}
 		
 		if(numero & !letras)
-			System.out.println("Todos son d�gitos");
+			System.out.println("Todos son digitos");
 		else if(!numero & letras)
 			System.out.println("Todos son letras");
 		else if(numero & letras)
