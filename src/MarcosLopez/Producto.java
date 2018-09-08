@@ -1,6 +1,6 @@
-package org.ipn.escom.model;
+package MarcosLopez;
 
-public class MarcosLopezProducto {
+public class Producto {
 	private String nombre;
 	private String descripcion;
 	private int precio;

@@ -1,4 +1,4 @@
-package org.ipn.escom.controller;
+package MarcosLopez;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,19 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ipn.escom.model.MarcosLopezProducto;
-
 /**
  * Servlet implementation class MarcosLopez
  */
 @WebServlet("/MarcosLopezRegistroProducto")
-public class MarcosLopezRegistroProducto extends HttpServlet {
+public class ProductoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MarcosLopezRegistroProducto() {
+    public ProductoController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +36,7 @@ public class MarcosLopezRegistroProducto extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println(":::Entro al metodo Post:::");
-		MarcosLopezProducto producto = new MarcosLopezProducto();
+		Producto producto = new Producto();
 		
 		producto.setNombre(request.getParameter("nombre"));
 		producto.setDescripcion(request.getParameter("descripcion"));
