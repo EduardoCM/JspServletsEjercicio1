@@ -1,7 +1,9 @@
 package davidjosuerodriguezchavez.util;
 
+import static java.lang.System.out;
+
 public class Validaciones {
-	public void validarPassword(String pass) {
+	public static void validarPassword(String pass) {
 		boolean numero = false;
 		boolean letras = false;
 
@@ -14,11 +16,11 @@ public class Validaciones {
 		}
 		
 		if(numero && letras) {
-			System.out.println("Alfanumerico");
+			out.println("Alfanumerico");
 		} else if(numero && !letras){
-			System.out.println("Todos son digitos");
+			out.println("Todos son digitos");
 		} else {
-			System.out.println("Todos son letras");
+			out.println("Todos son letras");
 		}
 
 	}
