@@ -9,12 +9,19 @@ public class Validaciones {
 		for (int i=0; i<pass.length(); i++) {
 			if(Character.isDigit(pass.charAt(i))) {
 				numero=true;
-				System.out.println("Todos son numeros");
 			}else {
 				letras = true;
-				System.out.println("Todos son letras");
+				
 			}
-			System.out.println("alfanumerico");
+			
+		}
+		
+		if(numero && !letras) {
+			System.out.println("Todos son digitos");
+		}else if (numero) {
+			System.out.println("Alfanumericos");
+		}else {
+			System.out.println("Todos letras");
 		}
 		
 	}
