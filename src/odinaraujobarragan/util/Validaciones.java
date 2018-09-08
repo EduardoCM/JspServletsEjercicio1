@@ -13,7 +13,7 @@ public class Validaciones {
 			}
 		}
 		
-		String mensaje = numero && letras ? "Es alfanumerico": numero?"Todos son digitos":"Todos son letras";
+		String mensaje = numero && letras ? "Es alfanumerico": numero ? "Todos son digitos" : "Todos son letras";
 		System.out.println(mensaje);
 	}
 }
