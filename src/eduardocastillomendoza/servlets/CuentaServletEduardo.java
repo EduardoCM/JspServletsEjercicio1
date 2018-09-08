@@ -58,6 +58,12 @@ public class CuentaServletEduardo extends HttpServlet {
 		nuevaCuenta.setContrasena(contrasena);
 		
 		cuentaBancaria.add(nuevaCuenta);
+		
+		request.setAttribute("cuentaBancariaList", cuentaBancaria);
+		
+		request.getRequestDispatcher("/jsp/EduardoCastillo/EduardoBanco.jsp")
+		.forward(request, response);
+		
 	}
 
 }

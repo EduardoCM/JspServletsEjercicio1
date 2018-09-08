@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,6 +64,17 @@
 	        <th>Banco</th>
 	        <th>Saldo</th>
 	      </tr>
+	      
+	      <c:forEach var="cuenta"  items="${cuentaBancariaList}">
+	      <tr>
+	         <td><c:out value="${cuenta.id}"></c:out></td>
+	         <td><c:out value="${cuenta.usuario}"></c:out></td>
+	         <td><c:out value="${cuenta.numCuenta}"></c:out></td>
+	         <td><c:out value="${cuenta.claveBanco}"></c:out></td>
+	         <td><c:out value="${cuenta.saldo}"></c:out></td>
+	      </tr>
+	      </c:forEach>
+	      
 	</table>
 	
 	
