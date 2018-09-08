@@ -10,8 +10,12 @@ public class testBanco {
 		CuentaBancaria cuentaAlejandra = new CuentaBancaria("Alejandra", "12356ASD", 50_000);
 		
 		cuentaGis.depositar(25_000);
-		
+		cuentaAlejandra.setContrasena("99999");
 		validaciones validaCuentaAlejandra = new validaciones();
+		validaCuentaAlejandra.validarContrasena(cuentaAlejandra.getContrasena());
+		cuentaAlejandra.setContrasena("99999A");
+		validaCuentaAlejandra.validarContrasena(cuentaAlejandra.getContrasena());
+		cuentaAlejandra.setContrasena("GGGGGGG");
 		validaCuentaAlejandra.validarContrasena(cuentaAlejandra.getContrasena());
 		
 	}
