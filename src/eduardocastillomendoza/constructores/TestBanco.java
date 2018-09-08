@@ -8,12 +8,13 @@ public class TestBanco {
 		CuentaBancaria cuentaFabi = new CuentaBancaria();
 		cuentaFabi.setContrasena("ASDASDASD");
 		cuentaFabi.depositar(2000);
-		cuentaFabi.setClaveBanco(BancosEnum.BANCOMER);
+		cuentaFabi.setClaveBanco(BancosEnum.B2);
 		
 		
 		CuentaBancaria cuentaLeo = new CuentaBancaria("Leonardo");
 		Bancos bancoLeo = new Bancos();
-		cuentaLeo.setClaveBanco(BancosEnum.HSBC);
+		cuentaLeo.setClaveBanco(BancosEnum.B1);
+		cuentaLeo.setContrasena("sdfsdf");
 		
 		CuentaBancaria cuentaAlejandra = 
 				new CuentaBancaria("Alejandra", 
