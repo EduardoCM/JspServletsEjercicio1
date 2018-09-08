@@ -4,6 +4,8 @@ import static eduardocastillomendoza.util.Validaciones.validarContrasena;;
 
 public class CuentaBancaria {
 
+	private int id;
+	
 	private String usuario;
 	private String numCuenta;
 	private BancosEnum claveBanco;
@@ -30,6 +32,12 @@ public class CuentaBancaria {
 	
 	
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public double consultaSaldo() {
 		return saldo;
 	}
@@ -65,8 +73,24 @@ public class CuentaBancaria {
 	public BancosEnum getClaveBanco() {
 		return claveBanco;
 	}
-	public void setClaveBanco(BancosEnum claveBanco) {
-		this.claveBanco = claveBanco;
+	public void setClaveBanco(String claveBanco) {
+		switch (claveBanco) {
+		case "banamex":
+			this.claveBanco = BancosEnum.BANAMEX;
+			break;
+        case "santander":
+			this.claveBanco = BancosEnum.SANTANDER;
+		 break;
+        case "hsbc":
+			this.claveBanco = BancosEnum.HSBC;
+    		break;
+       case "bancomer":
+    	   this.claveBanco = BancosEnum.BANCOMER;
+    		break;	
+		default:
+			break;
+		}
+		
 	}
 	public String getContrasena() {
 		return contrasena;
@@ -84,5 +108,12 @@ public class CuentaBancaria {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+	@Override
+	public String toString() {
+		return "CuentaBancaria [id=" + id + ", usuario=" + usuario + ", numCuenta=" + numCuenta + ", claveBanco="
+				+ claveBanco + ", contrasena=" + contrasena + ", saldo=" + saldo + "]";
+	}
+	
+	
 
 }
