@@ -8,12 +8,13 @@ public class TestBanco {
 		
 		//cuentaFabi.depositar(2000);
 		
-		CuentaBancaria cuentaLeo = new CuentaBancaria("Leonardo");
+		//CuentaBancaria cuentaLeo = new CuentaBancaria("Leonardo");
 		
 		cuentaFabi1.setContrasena("12345a");
+	
+		cuentaFabi1.setClaveBanco(Bancos.HSBC);
 		
-		CuentaBancaria cuentaAlejandra =
-				new CuentaBancaria("Alejandra", "28423100", 20_000);
+		//CuentaBancaria cuentaAlejandra = new CuentaBancaria("Alejandra", "28423100", 20_000);
 		
 		System.out.println("Creando cuenta bancaria");
 		
