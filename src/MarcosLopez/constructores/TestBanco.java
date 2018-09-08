@@ -5,7 +5,8 @@ public class TestBanco {
 		CuentaBancaria cuentaFabi = new CuentaBancaria();
 		cuentaFabi.depositar(2000);
 		cuentaFabi.setContrasena("LOHM900811");
-		cuentaFabi.setClaveBanco(Bancos.HSBC);
+		cuentaFabi.setClaveBanco(BancosEnum.BANAMEX);
+		
 		
 		/*CuentaBancaria cuentaLeo = new CuentaBancaria("Leonardo");
 		cuentaLeo.retirar(10000);
