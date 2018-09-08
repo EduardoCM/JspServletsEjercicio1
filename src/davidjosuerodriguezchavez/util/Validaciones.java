@@ -13,9 +13,9 @@ public class Validaciones {
 			}
 		}
 		
-		if(numero == true && letras == true) {
+		if(numero && letras) {
 			System.out.println("Alfanumerico");
-		} else if(numero == true && letras == false){
+		} else if(numero && !letras){
 			System.out.println("Todos son digitos");
 		} else {
 			System.out.println("Todos son letras");
