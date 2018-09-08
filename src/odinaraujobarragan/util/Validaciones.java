@@ -1,7 +1,7 @@
 package odinaraujobarragan.util;
 
 public class Validaciones {
-	public static void validarContraseña(String password) {
+	public static void validarContrasena(String password) {
 		boolean numero = false;
 		boolean letras = false;
 
@@ -13,7 +13,7 @@ public class Validaciones {
 			}
 		}
 		
-		String mensaje = numero && letras ? "Es alfanumerico": numero?"Todos son digitos":"Todos son letras";
+		String mensaje = numero && letras ? "Es alfanumerico": numero ? "Todos son digitos" : "Todos son letras";
 		System.out.println(mensaje);
 	}
 }
