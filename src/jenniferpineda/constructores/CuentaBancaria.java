@@ -1,5 +1,9 @@
 package jenniferpineda.constructores;
 
+import jenniferpineda.util.Validaciones;
+
+import static jenniferpineda.util.Validaciones.validarContrasena;
+
 public class CuentaBancaria {
 	
 	private String numCuenta;
@@ -52,7 +56,9 @@ public class CuentaBancaria {
 		return contrasena;
 	}
 	public void setContrasena(String contrasena) {
+		validarContrasena(contrasena);
 		this.contrasena = contrasena;
+		
 	}
 	public double getSaldo() {
 		return saldo;
