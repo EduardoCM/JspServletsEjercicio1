@@ -60,6 +60,8 @@
 					<td><c:out value="${cuenta.numCuenta}"></c:out></td>
 					<td><c:out value="${cuenta.claveBanco}"></c:out></td>
 					<td><c:out value="${cuenta.saldo}"></c:out></td>
+					<td><a href="cuentaServletDavid?op=editar&idCuenta=${cuenta.id}">Editar</a>
+					<td><a href="cuentaServletDavid?op=eliminar&idCuenta=${cuenta.id}">Eliminar</a>
 				</tr>
 			</c:forEach>
 

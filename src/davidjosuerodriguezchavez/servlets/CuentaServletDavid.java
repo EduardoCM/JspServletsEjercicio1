@@ -25,8 +25,15 @@ public class CuentaServletDavid extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println(":::GET:::");
-		response.getWriter().append("Cuentas agregadas: ").append(cuentas.toString());
+		String operacion = request.getParameter("op");
+		int idEliminar = Integer.parseInt(request.getParameter("idCuenta"));
+		
+		if(operacion.equals("eliminar")) {
+			cuentas.remove(idEliminar-1);
+			request.setAttribute("cuentas", cuentas);
+			request.getRequestDispatcher("/jsp/DavidRodriguez/DavidRodriguez.jsp").forward(request, response);
+		}
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -60,7 +67,6 @@ public class CuentaServletDavid extends HttpServlet {
 		cuentas.add(cuenta);
 		
 		request.setAttribute("cuentas", cuentas);
-		
 		request.getRequestDispatcher("/jsp/DavidRodriguez/DavidRodriguez.jsp").forward(request, response);
 	}
 
