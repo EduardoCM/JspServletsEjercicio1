@@ -2,7 +2,7 @@ package jenniferpineda.util;
 
 public class Validaciones {
 	
-	public void validarContraseña(String pass) {
+	public void validarContrasena(String pass) {
 		boolean numero = false;
 		boolean letras = false;
 		
@@ -13,13 +13,13 @@ public class Validaciones {
 				letras = true;
 			}
 		}
-		if(numero == true && letras == true) {
-			System.out.println("Es alfa numerico");
+		if(numero && letras) {
+			System.out.println("Es alfanumerico");
 		}
-		else if(numero == true && letras == false) {
+		else if(numero && !letras) {
 			System.out.println("Todos son digitos");
 		}
-		else if(numero == false && letras == true){
+		else if(!numero && !letras){
 			System.out.println("Todos son letras");
 		}
 	}

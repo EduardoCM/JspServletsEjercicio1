@@ -4,7 +4,7 @@ public class CuentaBancaria {
 	
 	private String numCuenta;
 	private String claveBanco;
-	private String contraseña;
+	private String contrasena;
 	private double saldo;
 	private String usuario;
 	
@@ -48,11 +48,11 @@ public class CuentaBancaria {
 	public void setClaveBanco(String claveBanco) {
 		this.claveBanco = claveBanco;
 	}
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contraseña) {
+		this.contrasena = contraseña;
 	}
 	public double getSaldo() {
 		return saldo;
