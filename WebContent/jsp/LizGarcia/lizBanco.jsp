@@ -7,7 +7,8 @@
 <title>Datos cuenta bancaria</title>
 </head>
 <body>
-	<form action="">
+<h1>Nueva cuenta</h1>
+	<form action="/cuentaServlet_Liz" method ="post">
 		<table >
 			<tr>
 				<td>Usuario:</td>
@@ -20,7 +21,7 @@
 
 			<tr>
 				<td>Clave banco:</td>
-				<td><select name="programa">
+				<td><select name="slBancos">
 						<option value="banamex" selected="selected">Banamex</option>
 						<option value="hsbc">HSBC</option>
 						<option value="santander">Santander</option>
@@ -29,7 +30,7 @@
 
 			<tr>
 				<td>Contraseña:</td>
-				<td><input type="text" name="lblPassword"></td>
+				<td><input type="password" name="lblPassword"></td>
 			</tr>
 			<tr>
 				<td>Saldo:</td>
@@ -40,5 +41,18 @@
 		</table>
 
 	</form>
+	
+	<div>
+		<table>
+			<tr>
+				<th>idUsuario</th>
+				<th>Usuario</th>
+				<th>Número de cuenta</th>
+				<th>Banco</th>
+				<th>Saldo</th>
+				
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
