@@ -2,7 +2,7 @@ package lorenadrianaperez.util;
 
 public class Validaciones {
 	
-	public void validarContrasena(String pass) {
+	public static void validarContrasena(String pass) {
 		boolean numero = false;
 		boolean letras = false;
 

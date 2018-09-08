@@ -1,5 +1,7 @@
 package lorenadrianaperez.constructores;
 
+import lorenadrianaperez.util.Validaciones;
+
 public class CuentaBancaria {
 	
 	private String usuario;
@@ -56,7 +58,8 @@ public class CuentaBancaria {
 		return contrasena;
 	}
 
-	public void setContraseña(String contrasena) {
+	public void setContrasena(String contrasena) {
+		Validaciones.validarContrasena(contrasena);
 		this.contrasena = contrasena;
 	}
 
