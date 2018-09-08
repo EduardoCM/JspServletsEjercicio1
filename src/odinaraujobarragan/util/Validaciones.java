@@ -1,7 +1,7 @@
 package odinaraujobarragan.util;
 
 public class Validaciones {
-	public static void validarContraseña(String password) {
+	public static void validarContrasena(String password) {
 		boolean numero = false;
 		boolean letras = false;
 
