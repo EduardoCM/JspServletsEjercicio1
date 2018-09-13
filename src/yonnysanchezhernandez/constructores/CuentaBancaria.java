@@ -1,11 +1,15 @@
 package yonnysanchezhernandez.constructores;
 
+import yonnysanchezhernandez.util.Validaciones;
+
 public class CuentaBancaria {
+	
+	private int id;
 
 	private String usuario;
 	private String numCuenta;
-	private String claveBanco;
-	private String contraseña;
+	private BancosEnum claveBanco;
+	private String contrasena;
 	private double saldo;
 	
 	public CuentaBancaria() {
@@ -24,6 +28,15 @@ public class CuentaBancaria {
 		this.saldo = saldo;
 		System.out.println("Cuenta de: " + usuario + ", numero de cuenta: " + numCuenta
 							+ ", con saldo: " + saldo);
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public double consultaSaldo() {
@@ -54,20 +67,38 @@ public class CuentaBancaria {
 		this.numCuenta = numCuenta;
 	}
 
-	public String getClaveBanco() {
+	public BancosEnum getClaveBanco() {
 		return claveBanco;
 	}
 
 	public void setClaveBanco(String claveBanco) {
-		this.claveBanco = claveBanco;
+		switch(claveBanco) {
+			case "banamex":
+			this.claveBanco = BancosEnum.BANAMEX;
+			break;
+			case "bancomer":
+			this.claveBanco = BancosEnum.BANCOMER;
+			break;
+			case "santader":
+			this.claveBanco = BancosEnum.SANTANDER;
+			break;
+			case "hsbc":
+			this.claveBanco = BancosEnum.HSBC;
+			break;
+			
+			
+		}
+//		this.claveBanco = claveBanco;
 	}
 
-	public String getContraseña() {
-		return contraseña;
+	public String getContrasena() {
+		return contrasena;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setContrasena(String contrasena) {
+		//Validaciones validar = new Validaciones();
+		Validaciones.validarContrasena(contrasena);
+		this.contrasena = contrasena;
 	}
 
 	public double getSaldo() {

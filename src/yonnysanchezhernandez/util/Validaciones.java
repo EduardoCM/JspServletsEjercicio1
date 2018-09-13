@@ -1,8 +1,9 @@
 package yonnysanchezhernandez.util;
+import static java.lang.System.out;
 
 public class Validaciones {
 	
-	public void validarContrasena(String pass) {
+	public static void validarContrasena(String pass) {
 		
 		boolean numero = false;
 		boolean letras = false;
@@ -17,13 +18,14 @@ public class Validaciones {
 
 		}
 		
-		if(numero = true & letras == false) {
+		if(numero && !letras) {
 			System.out.println("Todos son numero");
-		}if(letras = true & numero == false) {
-			System.out.println("Todos son letras");
-		}else {
-			System.out.println("Es alfanumerico");
+		}else if(numero) {
+			System.out.println("Son alfanumericos");
+		}else{
+			System.out.println("Son letras");
 		}
 
-		}
+
+	}
 }
